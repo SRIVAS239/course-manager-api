@@ -12,4 +12,9 @@ class Course extends Model
     protected $table = 'courses';
 
     protected $fillable=['teacher_id','course_name','course_desc','is_active'];
+
+    public function chapters()
+    {
+        return $this->hasMany(Chapter::class);
+    }
 }
